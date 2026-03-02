@@ -1,0 +1,23 @@
+---
+import Layout from "../layouts/main.astro"
+---
+
+<Layout>
+	<div slot="top">
+	</div>
+	<div slot="main">
+        <div class="projects">
+            <div class="project" onclick="window.location.href = 'https://meowg.code2craft.xyz'">
+                <img src="/media/img/preview/meowg.png" alt="Meowg Preview">
+                <h2>Meow Gallery</h2>
+            </div>
+            <div class="project" onclick="window.location.href = 'https://solar-system.webcris.icu/'">
+                <img src="/media/img/preview/tss.png" alt="The Solar System Preview">
+                <h2>The Solar System</h2>
+            </div>
+            <div class="project">
+                <h2>More coming soon!</h2>
+            </div>
+        </div>
+	</div>
+</Layout>

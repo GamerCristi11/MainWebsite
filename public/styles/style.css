@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Assistant:wght@200..800&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+
+body {
+    background-color: black;
+}
+
+h1,h2,h3,h4,h5,p,li {
+    font-family: DM Sans;
+    color: white;
+}
+
+a { 
+    display: inline-block;
+    height: 10px;
+    font-family: DM Sans;
+    text-decoration: none;
+    color: lightblue;
+    padding: 10px;
+}
+
+a:hover {
+    text-decoration: underline;
+    border-radius: 5px;
+}
+
+.top {
+    top: 15;
+    width: 99%;
+    display: flex;
+    gap: 20px;
+    border-bottom: 2px solid white ;
+}
+
+
+.main {
+    padding: 80px 40px;
+}
+
+.aboutmehome {
+    display: flex;
+    gap: 10px;
+}
+
+.linkstop {
+    padding-bottom: 10px;
+}
+
+.platform-links {
+    display: flex;
+    gap: 10px;
+}
+
+.project img{
+    width: 350px;
+    height: auto;
+}
+
+.project {
+    border: 1px solid white;
+    padding: 10px;
+    width: 350px;
+}
+
+.projects {
+    display: flex;
+    gap:20px;
+    flex-wrap: wrap;
+}
+
+.project:hover {
+    cursor: pointer;
+}
+
+.statuses {
+    display: flex;
+    gap: 20px;
+}
+
+.status {
+    border: 2px solid white;
+    width: fit-content;
+    padding: 10px;
+    flex-wrap: wrap;
+}

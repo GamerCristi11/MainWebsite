@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>CrizLzy</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="My personal website!">
+        <meta name="robots" content="noai, noimageai">
+        <link rel="stylesheet" type="text/css" href="/styles/style.css?v=1">
+        <link href="/media/img/icon.png" rel="icon" type="image/x-icon" />
+        <script src="/otherfiles/1.js" defer></script>
+	    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+    </head>
+    <body>
+        <div class="top">
+            <div class="linkstop">
+                <a href="/">Home</a>
+                <a href="/projects">Projects</a>
+                <a href="/contact">Contact</a>
+                <a href="/buttonswall">Buttons Wall</a>
+            </div>
+            <slot name="top" />
+        </div>
+        <div class="main">
+            <slot name="main" />
+        </div>
+    </body>
+</html>

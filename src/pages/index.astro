@@ -1,17 +1,95 @@
 ---
-
+import Layout from "../layouts/main.astro"
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<Layout>
+	<div slot="top">
+	</div>
+	<div slot="main">
+		<div class="aboutmehome">
+			<img src="/media/img/icon.png" alt="logo" height="200px" width="200px" />
+			<div class="textamh">
+				<h2>About Me</h2>
+				<p>I'm CrisLzy(previously Code2Craft), I'm a teen wanna-be developer from Romania who likes to mess with tech and to code.</p>
+				<p>Also I'm a proud HackClub member!<a href="https://hackclub.com" target="_blank"><img src="https://assets.hackclub.com/flag-standalone.svg" alt="HC Banner" height=15px width=auto></a>
+				<p>Fun fact: Lzy comes from lazy, because I'm lazy...</p>
+				<div class="platform-links">
+					<a href="https://github.com/GamerCristi11"><i class="fab fa-github fa-2x"></i></a>
+				</div>
+			</div>
+		</div>
+		<h3>Link Me :)</h3>
+		<img src="/media/buttons/88x31.gif">  <textarea readonly><a href="https://crislzy.xyz" target="_blank"><img src="https://crislzy.xyz/media/buttons/88x31.gif"></a></textarea>
+		<h2>Statuses:</h2>
+		<div class="statuses">
+			<div class="status">
+				<p id="listening">Loading...</p>
+				<p id="mlistening">Loading...</p>
+				<script>
+				const BASE_URL = 'https://lastfm-last-played.biancarosa.com.br/crisc2c/latest-song';
+
+				const lastfmthing = async () => {
+					try {
+					const request = await fetch(BASE_URL);
+					const json = await request.json();
+
+					let isPlaying = json.track['@attr']?.nowplaying === "true";
+
+					let title = json.track.name || "Unknown Title";
+					let artist = json.track.artist['#text'] || "Unknown Artist";
+
+
+
+						document.getElementById("listening").textContent =
+							(isPlaying ? "Now listening: " : "Last listened: ");
+						document.getElementById("mlistening").textContent =  title + " - " + artist;
+
+					} catch (err) {
+						console.error(err);
+						document.getElementById("listening").textContent = "Could not load track";
+					}
+				};
+				lastfmthing();
+				setInterval(lastfmthing, 10000);
+				</script>
+			</div>
+			<div class="status">
+				<div id="statuscafe"><div id="statuscafe-username"></div><div id="statuscafe-content">Loading Status...</div></div>
+				<script>
+				fetch("https://status.cafe/users/code2craft/status.json")
+				.then( r => r.json() )
+				.then( r => {
+					if (!r.content.length) {
+					document.getElementById("statuscafe-content").innerHTML = "No status yet."
+					return
+					}
+					document.getElementById("statuscafe-username").innerHTML =   `<p class="sc-up">My Status: ${r.face} ${r.timeAgo}</p>`
+					document.getElementById("statuscafe-content").innerHTML =  `<p class="sc-content">${r.content}</p>`
+				})
+				</script>
+			</div>
+			<div class="status" style="display: flex; align-items: center;">
+				<div class="thing">
+					<div class="discord">
+						<p id="status-details">loading...</p>
+					</div>
+				</div>
+				<script>
+				async function discordChecker() {
+					try {
+					const response = await fetch('https://api.lanyard.rest/v1/users/920617892444258305');
+					const splingus = await response.json();
+					document.getElementById("status-details").innerHTML = `
+					Discord Status: I'm <strong>${splingus.data.discord_status}</strong>`
+					} catch (error) {
+					console.error("failed to fetch!!", error);
+					}
+				};
+
+				discordChecker();
+				setInterval(discordChecker, 5000);
+				</script>
+			</div>
+		</div>
+	</div>
+</Layout>
