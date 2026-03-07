@@ -82,3 +82,24 @@ a:hover {
     padding: 10px;
     flex-wrap: wrap;
 }
+
+.othstuffmain {
+    display: flex;
+    gap:20px;
+    flex-wrap: wrap;
+}
+
+.othstuff {
+    border: 1px solid white;
+    padding: 10px;
+    width: auto;
+}
+
+.othstuff:hover{
+    cursor: pointer;
+}
+
+.othstuff img{
+    width: 350px;
+    height: auto;
+}
