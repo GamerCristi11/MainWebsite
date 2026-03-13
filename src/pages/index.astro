@@ -9,21 +9,19 @@ import Layout from "../layouts/main.astro"
 		<div class="aboutmehome">
 			<img src="/media/img/icon.png" alt="logo" height="200px" width="200px" />
 			<div class="textamh">
-				<h2>About Me</h2>
+				<h2>Hello unique visitor <script type="text/javascript" src="https://counter.websiteout.com/js/7/4/0/1"></script></h2>
 				<p>I'm CrisLzy(previously Code2Craft), I'm a teen wanna-be developer from Romania who likes to mess with tech and to code.</p>
-				<p>Also I'm a proud HackClub member!<a href="https://hackclub.com" target="_blank"><img src="https://assets.hackclub.com/flag-standalone.svg" alt="HC Banner" height=15px width=auto></a>
-				<p>Fun fact: Lzy comes from lazy, because I'm lazy...</p>
+				<p>Also I'm a proud HackClub member!<a href="https://hackclub.com" target="_blank"><img src="https://assets.hackclub.com/flag-standalone.svg" alt="HC Banner" height=15px width=auto></a>  <a href="/about">See more info</a></p>
 				<div class="platform-links">
 					<a href="https://github.com/GamerCristi11"><i class="fab fa-github fa-2x"></i></a>
+					<a href="https://crislzy.itch.io"><i class="fab fa-itch-io fa-2x"></i></a>
 				</div>
 			</div>
 		</div>
-		<h3>Link Me :)</h3>
-		<img src="/media/buttons/88x31.gif">  <textarea readonly><a href="https://crislzy.xyz" target="_blank"><img src="https://crislzy.xyz/media/buttons/88x31.gif"></a></textarea>
-		<h2>Statuses:</h2>
+		<h2>Statuses</h2>
 		<div class="statuses">
 			<div class="status">
-				<p id="listening">Loading...</p>
+				<p id="listening">Loading song...</p>
 				<p id="mlistening">Loading...</p>
 				<script>
 				const BASE_URL = 'https://lastfm-last-played.biancarosa.com.br/crisc2c/latest-song';
@@ -45,7 +43,7 @@ import Layout from "../layouts/main.astro"
 						document.getElementById("mlistening").textContent =  title + " - " + artist;
 
 					} catch (err) {
-						console.error(err);
+						
 						document.getElementById("listening").textContent = "Could not load track";
 					}
 				};
@@ -82,7 +80,7 @@ import Layout from "../layouts/main.astro"
 					document.getElementById("status-details").innerHTML = `
 					Discord Status: I'm <strong>${splingus.data.discord_status}</strong>`
 					} catch (error) {
-					console.error("failed to fetch!!", error);
+					
 					}
 				};
 

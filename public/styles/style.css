@@ -31,11 +31,6 @@ a:hover {
     border-bottom: 2px solid white ;
 }
 
-
-.main {
-    padding: 80px 40px;
-}
-
 .aboutmehome {
     display: flex;
     gap: 10px;
@@ -50,20 +45,9 @@ a:hover {
     gap: 10px;
 }
 
-.project img{
-    width: 350px;
-    height: auto;
-}
-
-.project {
-    border: 1px solid white;
-    padding: 10px;
-    width: 350px;
-}
-
 .projects {
     display: flex;
-    gap:20px;
+    gap:30px;
     flex-wrap: wrap;
 }
 
@@ -102,4 +86,67 @@ a:hover {
 .othstuff img{
     width: 350px;
     height: auto;
+}
+
+li {
+    list-style:none;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    align-items: stretch;
+}
+
+.side {
+    flex: 1;
+    border-right: 2px solid white;
+    min-height: 100vh;
+    padding: 10px;
+}
+
+.main {
+    padding: 80px 40px;
+    flex: 8;
+}
+
+.buttons a {
+    padding-left: 0;
+    margin-left: 0;
+}
+
+.himg1 {
+    border: 2px solid white;
+    border-radius: 5px;
+    transition: transform 0.2s;
+}
+
+.himg1:hover {
+    transform: scale(1.15);
+    border-color: lightblue;
+}
+
+.project {
+    border: 2px solid white;
+    border-radius: 5px;
+    transition: transform 0.2s;
+}
+
+.project:hover {
+    border: 2px solid white;
+    border-radius: 5px;
+    transform: scale(1.10); 
+}
+
+.project img{
+    width: 350px;
+    height: auto;
+}
+
+.topMessage {
+    color: white;
+    font-family: DM Sans;
+    text-align: center;
+    width: 100%;
 }

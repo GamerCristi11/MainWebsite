@@ -1,3 +1,7 @@
+---
+import Buttons from "../widgets/wb.astro"
+---
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -8,21 +12,32 @@
         <meta name="robots" content="noai, noimageai">
         <link rel="stylesheet" type="text/css" href="/styles/style.css?v=1">
         <link href="/media/img/icon.png" rel="icon" type="image/x-icon" />
-        <script src="/otherfiles/1.js" defer></script>
+        <script src="/js/1.js" defer></script>
+        <script src="/js/messages.js" defer></script>
 	    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
     </head>
     <body>
         <div class="top">
-            <div class="linkstop">
-                <a href="/">Home</a>
-                <a href="/projects">Projects</a>
-                <a href="/contact">Contact</a>
-                <a href="/otherstuff">Other Stuff</a>
-            </div>
+            <div id="topMessage" class="topMessage">Loading...</div>
             <slot name="top" />
         </div>
-        <div class="main">
-            <slot name="main" />
+        <div class="container">
+            <div class="side">
+                <slot name="side" />
+                <div class="sidelinks">
+                    <a href="/">Home</a>
+                    <a href="/about">About</a>
+                    <a href="/projects">Projects</a>
+                    <a href="/blog">Blog</a>
+                    <a href="/contact">Contact</a>
+                </div>
+                
+                <h4>My button(Click to copy code)</h4>
+		        <img src="/media/buttons/88x31.gif" onclick="copyCode('Button1')" style="cursor: pointer;" class="himg1">
+            </div>
+            <div class="main">
+                <slot name="main" />
+            </div>
         </div>
     </body>
 </html>
